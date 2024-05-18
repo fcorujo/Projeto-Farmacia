@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos</title>
+    <style>
+        body {
+            background-color: #f0f0f0; 
+            font-family: Arial, sans-serif; 
+        }
+        h2 {
+            color: #333; 
+        }
+        ul {
+            list-style-type: none; 
+            padding: 0;
+        }
+        li {
+            background-color: #fff; 
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+            overflow: auto; 
+        }
+        li:hover {
+            background-color: #f9f9f9; 
+        }
+        .button-container {
+            float: right; 
+            height: 100%; 
+            display: flex; 
+            align-items: center; 
+        }
+        button {
+            background-color: #007bff; 
+            color: #fff; 
+            border: none;
+            padding: 8px 16px;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3; 
+        }
+        a:hover {
+            color: #0056b3; 
+        }
+        a {
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Produtos</h2>
+    <ul>
+        {% for produto in produtos %}
+            <li>
+                {{ produto[1] }} 
+                <div class="button-container">
+                    <form action="/edit_product/{{ produto[0] }}" method="get" style="display: inline;">
+                        <button type="submit">Editar</button>
+                    </form>
+                    <form action="/delete_product/{{ produto[0] }}" method="get" style="display: inline;">
+                        <button type="submit">Excluir</button>
+                    </form>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <p><a href="/add_product">Adicionar um produto</a></p>
+    <a href="/all_products">Ver Relatorio</a>
+</body>
+</html>

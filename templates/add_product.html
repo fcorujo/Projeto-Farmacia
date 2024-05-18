@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adicionar Produto</title>
+    <style>
+        body {
+            background-color: #f0f0f0; 
+            font-family: Arial, sans-serif; 
+        }
+        h2 {
+            color: #333; 
+        }
+        form {
+            background-color: #fff; 
+            padding: 20px;
+            border-radius: 5px; 
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+        }
+        label {
+            font-weight: bold; 
+            margin-right: 10px; 
+        }
+        input[type="text"] {
+            padding: 8px; 
+            margin-bottom: 10px; 
+            border-radius: 3px; 
+            border: 1px solid #ccc; 
+            width: 100%; 
+            box-sizing: border-box; 
+        }
+        input[type="submit"] {
+            background-color: #007bff; 
+            color: #fff; 
+            border: none;
+            padding: 10px 20px; 
+            border-radius: 3px; 
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        a:hover {
+            color: #0056b3; 
+        }
+        a {
+            text-decoration: none; 
+        }
+    </style>
+</head>
+<body>
+    <h2>Adicionar Produto</h2>
+    <form action="/add_product" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"><br>
+        <label for="preco">Preço:</label>
+        <input type="text" id="preco" name="preco"><br>
+        <label for="quantidade">Quantidade:</label>
+        <input type="text" id="quantidade" name="quantidade"><br>
+        <input type="submit" value="Adicionar">
+    </form>
+    </p><a href="/">Voltar para o Índice</a><p>
+    <a href="/all_products">Ver Relatorio</a>
+        
+</body>
+</html>

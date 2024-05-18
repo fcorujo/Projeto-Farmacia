@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmácia</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+    <h1>Farmácia</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Produtos</a></li>
+            <li><a href="/add_product">Adicionar Produto</a></li>
+            <li><a href="/all_products">Relatórios</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
